@@ -1,10 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Navbar from './components/navbarsection.components';
+import Section1 from './components/section1.component';
+import ArrayShow from './components/showdata.components';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+<ArrayShow/>
+      {/* <Navbar /> */}
+      {/* <Section1/> */}
+
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +23,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }

@@ -27,7 +27,24 @@
 .App-link {
   color: #61dafb;
 }
+.thread,th{
+  background-color: #61dafb
+  ;
+  border: 2px solid rgb(224, 47, 47);
+  color: black;
+}
+.tbody{
+ 
+  border: 2px dotted black;
+}
+.show{
+  margin: 200px;
+  width: 50%;
+}
+tr,td{
+  border: 2px dotted black;
 
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
