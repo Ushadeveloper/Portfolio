@@ -1,0 +1,82 @@
+.form-container {
+    width: 45%;
+    padding: 20px 32px;
+    background-color: white;
+    margin-left: 20px;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: block;
+    float: left;
+}
+
+input[type=text],
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type=submit]:hover {
+    background-color: #481abc;
+}
+
+h1 {
+    color: #249ce7;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 70px;
+}
+
+.product-table td {
+    border: 1px solid #ddd;
+
+    padding: 10px;
+    text-align: center;
+}
+
+
+.product-table th {
+    background-color: #61dafb;
+    padding: 10px;
+    text-align: center;
+    color: black;
+}
+
+.tbody {
+
+    border: 2px dotted black;
+}
+
+.table-container {
+    width: 40%;
+    padding: 5px;
+    background-color: white;
+    margin-right: 40px;
+    margin-top: 50px;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: block;
+    float: right;
+}
+
+.product-table {
+    width: 100%;
+}
+
+tr,
+td {
+    border: 2px dotted black;
+
+}

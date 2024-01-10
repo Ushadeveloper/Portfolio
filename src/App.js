@@ -1,12 +1,24 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/navbarsection.components';
-import Section1 from './components/section1.component';
-import ArrayShow from './components/showdata.components';
+import './table.css'
+// import Navbar from './components/navbarsection.components';
+// import Section1 from './components/section1.component';
+// import ArrayShow from './components/showdata.components';
+//import Pracprops from './components/propsprac.components'
+// import ImagesSlider from './components/imageslider.components';
+// import Slideshow from './components/slideshowimage.component';
+import ShowTableData from './components/table.componets';
+
 function App() {
   return (
     <div className="App">
-<ArrayShow/>
+
+      <ShowTableData />
+      {/* <Slideshow />
+      <ArrayShow />
+      <ImagesSlider /> */}
+      {/* <Pracprops/> */}
+
       {/* <Navbar /> */}
       {/* <Section1/> */}
 
