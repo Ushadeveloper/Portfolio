@@ -7,13 +7,21 @@ import './table.css'
 //import Pracprops from './components/propsprac.components'
 // import ImagesSlider from './components/imageslider.components';
 // import Slideshow from './components/slideshowimage.component';
-import ShowTableData from './components/table.componets';
+// import ShowTableData from './components/table.componets';
+// import DataArray from './components/mapFilterStore';
+import ShowDataurl from './fetchData/showDataUrl'
+
 
 function App() {
   return (
     <div className="App">
 
-      <ShowTableData />
+      <ShowDataurl />
+
+
+      {/* <DataArray /> */}
+
+      {/* <ShowTableData /> */}
       {/* <Slideshow />
       <ArrayShow />
       <ImagesSlider /> */}
