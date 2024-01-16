@@ -22,14 +22,14 @@ function ShowTableData() {
     //////////////////create state filterGuestTbl to filter data in state///////////////////////////
 
     const [filterGuestTbl, setFilterGuestTbl] = useState('');
-    // console.log('filter of Guest', filterGuestTbl);
+    console.log('filter of Guest', filterGuestTbl); 
 
 
     //////////////////create handleFilterChange event to trigger the input  ///////////////////////////
 
     const handleFilterChange = (e) => {
 
-        setFilterGuestTbl(e.target.value)
+        setFilterGuestTbl(e.target.value)  //ali
     }
     //////////////////create filteredGuestTable  to filter the input  ///////////////////////////
 
@@ -146,7 +146,7 @@ function ShowTableData() {
             <div className="table-container">
 
 
-                <input type="text" placeholder="Search by Id, Name, Phone, or Address" value={filterGuestTbl} onChange={handleFilterChange} />
+                <input type="text" placeholder="Search by Id, Name, Phone, or Address"  onChange={handleFilterChange} />
 
                 <table className="product-table">
                     <thead className='thread'>
@@ -167,23 +167,7 @@ function ShowTableData() {
                 </table>
 
 
-                {/* <table className="product-table">
-                    <thead className='thread'>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Address</th>
-                        </tr>
-                    </thead>
-                    <tbody className='tbody'>
-                        {gstbl.map(guest =>
-                            <tr><td>{guest.Id}</td>
-                                <td>{guest.Name}</td>
-                                <td>{guest.Phone}</td>
-                                <td>{guest.Address}</td></tr>)}
-                    </tbody>
-                </table> */}
+                
 
             </div>
         </>

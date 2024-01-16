@@ -7,30 +7,40 @@ import './table.css'
 //import Pracprops from './components/propsprac.components'
 // import ImagesSlider from './components/imageslider.components';
 // import Slideshow from './components/slideshowimage.component';
-// import ShowTableData from './components/table.componets';
-// import DataArray from './components/mapFilterStore';
-import ShowDataurl from './fetchData/showDataUrl'
+//import ShowTableData from './components/table.componets';
+
+//  import ShowDataurl from './fetchData/showDataUrl'
+
+import FetchApi from './fetchData/hotelmanagement.dapper';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Update } from './fetchData/Update';
 
 
 function App() {
   return (
-    <div className="App">
+    // <div className="App">
 
-      <ShowDataurl />
+     <BrowserRouter>
+    <Routes>
+      <Route path='/' element={ <FetchApi />}/>
+      <Route path='/update/:id' element={<Update/>}/>
+    </Routes>
+     </BrowserRouter>
+    /* <ShowDataurl /> */
 
 
-      {/* <DataArray /> */}
+      /* <DataArray /> */
 
-      {/* <ShowTableData /> */}
-      {/* <Slideshow />
+      /* <ShowTableData /> */
+      /* <Slideshow />
       <ArrayShow />
-      <ImagesSlider /> */}
-      {/* <Pracprops/> */}
+      <ImagesSlider /> */
+      /* <Pracprops/> */
 
-      {/* <Navbar /> */}
-      {/* <Section1/> */}
+      /* <Navbar /> */
+      /* <Section1/> */
 
-      {/* <header className="App-header">
+      /* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -43,8 +53,8 @@ function App() {
         >
           Learn React
         </a>
-      </header> */}
-    </div>
+      </header> */
+    /* </div> */
   );
 }
 

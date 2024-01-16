@@ -11,7 +11,7 @@ const ShowDataurl = () => {
 
     
     useEffect(() => {
-        fetch("http://192.168.10.63:7373/api/Employee")
+        fetch("http://localhost:8092/api")
             .then(response => response.json())
             .then(data => setEmpData(data));
     }, []);
@@ -46,9 +46,9 @@ const ShowDataurl = () => {
                             <tr key={item.id}>
 
                                 <td>{item.id}</td>
-                                <td>{item.employeeName}</td>
-                                <td>{item.cnic}</td>
-                                <td>{item.address}</td>
+                                <td>{item.name}</td>
+                                <td>{item.fatherName}</td>
+                                <td>{item.age}</td>
                                 <td>{item.phoneNo}</td>   
                                
 
