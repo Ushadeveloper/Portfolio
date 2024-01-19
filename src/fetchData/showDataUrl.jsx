@@ -11,7 +11,7 @@ const ShowDataurl = () => {
 
     
     useEffect(() => {
-        fetch("http://localhost:8092/api")
+        fetch("http://localhost:8094/api/Guest")
             .then(response => response.json())
             .then(data => setEmpData(data));
     }, []);
@@ -30,8 +30,9 @@ const ShowDataurl = () => {
                     <th>TITLE</th>
                     <th>BODY</th> */}
                     <th>ID</th>
-                    <th>Emp Name</th>
-                    <th>CNIC</th>
+                    <th>Name</th>
+                    <th>DOB</th>
+                    <th>Email</th> 
                     <th>Address</th>
                     <th>Phone</th>
                     
@@ -47,9 +48,10 @@ const ShowDataurl = () => {
 
                                 <td>{item.id}</td>
                                 <td>{item.name}</td>
-                                <td>{item.fatherName}</td>
-                                <td>{item.age}</td>
-                                <td>{item.phoneNo}</td>   
+                                <td>{item.dob}</td>
+                                <td>{item.email}</td>
+                                <td>{item.phone}</td>   
+                                <td>{item.address}</td>   
                                
 
                             </tr>

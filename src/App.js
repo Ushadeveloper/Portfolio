@@ -14,6 +14,7 @@ import './table.css'
 import FetchApi from './fetchData/hotelmanagement.dapper';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Update } from './fetchData/Update';
+import { Delete } from './fetchData/delete';
 
 
 function App() {
@@ -23,10 +24,12 @@ function App() {
      <BrowserRouter>
     <Routes>
       <Route path='/' element={ <FetchApi />}/>
-      <Route path='/update/:id' element={<Update/>}/>
+      <Route path='update/:id' element={<Update/>}/>
+      <Route path='delete/:id' element={<Delete/>}/>
+      {/* <Route path='/' element={<Fe/>}/> */}
     </Routes>
      </BrowserRouter>
-    /* <ShowDataurl /> */
+    //  <ShowDataurl /> 
 
 
       /* <DataArray /> */

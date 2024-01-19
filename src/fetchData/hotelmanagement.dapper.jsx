@@ -1,4 +1,6 @@
-import { Link, useParams} from "react-router-dom";
+import { Link} from "react-router-dom";
+// import moment from 'moment';
+// import DateTimePicker from 'react-datetime-picker';
 
 import { useState, useEffect } from "react";
 // import { Outlet, Link } from 'react-router-dom';
@@ -17,17 +19,14 @@ const FetchApi = () => {
     console.log('daaaata :', hotelData);
 
 
-
+//     const today = new Date();
+//    today.toLocaleDateString();
     ////////////////////Post Data State///////////////////////
-
+    // OffsetDateTime odt = OffsetDateTime.parse("2020-12-20T00:00:00.000Z");
     const [postData, setPostData] = useState(
         {
-            id: 0,
-            name: "",
-            dob: "",
-            email: "",
-            phone: "",
-            address: ""
+            name:""
+           
 
         }
     );
@@ -76,7 +75,7 @@ const FetchApi = () => {
 
     const handleSubmit = (e) => {
 
-        //   e.preventDefault();
+           e.preventDefault();
         console.log("post hotel:", postData);
 
         console.log('BEFORE FETCH ');
@@ -84,13 +83,14 @@ const FetchApi = () => {
             {
                 method: 'POST',
                 headers: {
+                    // "Accept":'application/json',
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify(postData),
 
             })
-            //  .then(response => response.json())
-            //  .then(response => console.log('AFTER FETCH',JSON.stringify(response)))
+             .then(response => response.json())
+             .then(response => console.log('AFTER FETCH',JSON.stringify(response)))
 
             .catch((e) => { console.log('error : ', e.message) });
     }
@@ -103,20 +103,20 @@ const FetchApi = () => {
 
             <div className="form-container">
                 <form className="user-form">
-                    <label htmlFor="Name">Name:</label>
-                    <input type="text" id="Name" name="Name" value={postData.name} onChange={handleName} />
+                    <label >Name:</label>
+                    <input type="text" id="Name" name="name" value={postData.name} onChange={handleName} />
 
-                    <label htmlFor="name">Birth:</label>
-                    <input type="date" id="Birth" name="Birth" value={postData.dob} onChange={handleDOB} />
+                    <label >Birth:</label>
+                    <input type="date" id="Birth" name="birth" value={postData.dob} onChange={handleDOB} />
 
-                    <label htmlFor="name">Email:</label>
-                    <input type="text" id="Email" name="Email" value={postData.email} onChange={handleEmail} />
+                    <label >Email:</label>
+                    <input type="text" id="Email" name="email" value={postData.email} onChange={handleEmail} />
 
-                    <label htmlFor="phone">Phone:</label>
-                    <input type="tel" id="Phone" name="Phone" value={postData.phone} onChange={handlePhone} />
+                    <label >Phone:</label>
+                    <input type="text" id="Phone" name="phone" value={postData.phone} onChange={handlePhone} />
 
-                    <label htmlFor="address">Address:</label>
-                    <textarea id="Address" name="Address" rows="2" value={postData.address} onChange={handleAddress}></textarea>
+                    <label >Address:</label>
+                    <textarea  name="address" rows="2" value={postData.address} onChange={handleAddress}></textarea>
 
                     <button onClick={handleSubmit} type="submit">Submit</button>
                 </form>
@@ -139,18 +139,19 @@ const FetchApi = () => {
                         </tr>
                     </thead>
                     <tbody className='tbody'>
-                        {hotelData.map((guest, index) =>
-                            <tr key={index}>
+                        {hotelData.map((guest) =>
+                            <tr key={guest.id}>
                                 <td>{guest.id}</td>
                                 <td>{guest.name}</td>
                                 <td>{guest.dob}</td>
                                 <td>{guest.phone}</td>
                                 <td>{guest.address}</td>
-                                <td><Link to={`update/${guest.id}`}>
-                                <button type="submit" style={{ backgroundColor: 'lightskyblue', padding: '10px 12px',textAlign:'center', color: 'white', border: 'none' }} >EDIT</button>
+                               <td><Link to={`update/${guest.id}`}>
+                                <button  style={{ backgroundColor: 'lightskyblue', padding: '10px',textAlign:'center', color: 'white', border: 'none' }} >EDIT</button>
                                 </Link>
-                                
-                                <button style={{ backgroundColor: 'red', padding: '10px 12px', color: 'white', border: 'none' ,margin:'5px'}}>DELETE</button>
+                                <Link to={`delete/${guest.id}`}>
+                                 <button style={{ backgroundColor: 'red', padding: '10px 12px', color: 'white', border: 'none' ,margin:'5px'}}>DELETE</button> 
+                                 </Link>
                                 </td>
                                 {/* <td>
                                     <Link to={`/data/${guest.id}`}>
